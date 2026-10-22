@@ -9,6 +9,17 @@ npm install
 npm run dev
 ```
 
+## API and MySQL
+
+Copy `.env.example` to `.env`, update the database credentials, then initialize the schema:
+
+```bash
+mysql -u root -p < server/schema.sql
+npm run api
+```
+
+The API runs on `http://localhost:4000` and currently exposes health, customers, milk collections, and payments endpoints. Credentials are read only from environment variables.
+
 ## Current scope
 
 - DairyFlow dashboard with collection, revenue, customer, and payment metrics
